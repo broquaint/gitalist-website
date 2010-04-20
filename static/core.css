@@ -55,7 +55,7 @@ a img{
 	background:transparent url(../static/i/bg_top.png) no-repeat;
 }
 .copy{
-	padding:10px;
+	margin-left: 15px;
 }
 #logo{
 	margin-left:-10px;
@@ -86,7 +86,7 @@ a img{
 	width:100%;
 	clear:both;
 	float:right;
-	margin:-5px 10px 0 0;
+	margin:-8px 10px 0 0;
 }
 #nav_logs ul{
 	margin:0;

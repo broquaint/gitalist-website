@@ -16,28 +16,18 @@
 			<div class="sub_holder">
 				<div id="header">
 					<a href="static/index.htm" id="logo" name="logo"><img src="static/gitalist-logo.png" alt="Gitalist" /></a>
-					<div class="search">
-						<!--
-			
-			<form method="get" action="search" enctype="application/x-www-form-urlencoded">
-			   <p class="projsearch">Search:
-				<input type="text" name="s" value="" />
-			   </p>
-			</form>
-			-->
-					</div>
 				</div>
 				<div id="nav_logs">
 					<ul>
 						<li>
-							<a href="" id="tree" name="tree">Source</a>
+							<a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git" id="tree" name="tree">Source</a>
 						</li>
 						<li>
-							<a href="" id="log_full" name="log_full">Docs</a>
-						</li>
-						<li>
-							<a href="" id="log_short" name="log_short">demo</a>
-						</li>
+							<a href="http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm" id="log_full" name="log_full">Docs</a>
+						</li><!-- TODO
+						<li> 
+							<a href="" id="log_short" name="log_short">Demo</a>
+						</li> -->
 					</ul>
 				</div>
 				<h1>
@@ -51,9 +41,18 @@
 					<br />
 					<br />
 					<h2>Status</h2>
-					<p>Good enough to use, but with some rough edges</p>
-					<p>
+					<p class='copy'>
+					Good enough to use, but with some rough edges.
+					</p>
+					
+					<dl class='copy'>
+						<dt>Stable</dt>
+						<dd><a href="http://search.cpan.org/~broq/Gitalist-0.001001/" title="0.001001">0.001001</a></dd>
+						<dt>Development</dt>
+						<dd><a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git;a=shortlog;h=refs/heads/swann" title="swann">swann</a></dd>
+					</dl>
 					<h2>Features</h2>
+					<p>
 						<ul>
 							<li>Multiple repository support</li>
 							<li>Multiple branch support</li>
@@ -62,8 +61,8 @@
 						</ul>
 					</p>
 					<h2>Contact / help</h2>
-					<p>IRC: irc.perl.org #gitalist</p>
-					<p>Bug reports: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Gitalist">Perl RT</a></p>
+					<p class='copy'>IRC: irc.perl.org #gitalist</p>
+					<p class='copy'>Bug reports: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Gitalist">Perl RT</a></p>
 	
 				</div>
 			</div>
@@ -72,19 +71,8 @@
 			<div id="footer" class="sub_holder">
 				<a title="git homepage" href="http://git-scm.org/"><img src="static/git-logo.png" id="git_logo" alt="git" /></a>
 				<div id="feeds">
+					<a class="rss_logo" href="http://github.com/broquaint/Gitalist/commits/master.atom">Atom</a>
 				</div>
-			</div>
-		</div>
-		<div id="debug_holder">
-			<div id="debug" class="sub_holder">
-				<p>
-					Debug:
-				</p>
-				<pre>
- 
-    
-    
-</pre>
 			</div>
 		</div>
 	</body>
