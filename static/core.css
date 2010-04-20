@@ -16,7 +16,7 @@
 
 
 body{
-	background:#FAFAFA url(http://wonderland:3000/static/i/bg.png) repeat-x left top;
+	background:#FAFAFA url(../static/i/bg.png) repeat-x left top;
 	padding:0;
 	margin:0;
 	font-family:Arial, Verdana, sans-serif;
@@ -42,16 +42,17 @@ a img{
 }
 
 #content_holder{
-	background:transparent url(http://wonderland:3000/static/i/bg_content.png) repeat-y center center;
+	background:transparent url(../static/i/bg_content.png) repeat-y center center;
 }
 #content{
 	min-height:200px;
 	padding:0 12px 40px 10px;
-	background:transparent url(http://wonderland:3000/static/i/bg_bottom.png) no-repeat center bottom;
+	background:transparent url(../static/i/bg_bottom.png) no-repeat center bottom;
 }
 #content_inner{
 	padding-bottom:30px;
-	background:transparent url(http://wonderland:3000/static/i/bg_top.png) no-repeat;
+	padding: 0 20px 30px 20px;
+	background:transparent url(../static/i/bg_top.png) no-repeat;
 }
 .copy{
 	padding:10px;
@@ -108,13 +109,13 @@ a img{
 	text-decoration:none;
 }
 a#log_short{
-	background:#666 url(http://wonderland:3000/static/i/icons/shortlog.gif) no-repeat 15px center;
+	background:#666 url(../static/i/icons/shortlog.gif) no-repeat 15px center;
 }
 a#log_full{
-	background:#666 url(http://wonderland:3000/static/i/icons/fulllog.gif) no-repeat 15px center;
+	background:#666 url(../static/i/icons/fulllog.gif) no-repeat 15px center;
 }
 a#tree{
-	background:#666 url(http://wonderland:3000/static/i/icons/tree.gif) no-repeat 15px center;
+	background:#666 url(../static/i/icons/tree.gif) no-repeat 15px center;
 }
 #nav_logs li a:hover{
 	text-decoration:underline;
@@ -194,7 +195,7 @@ a:hover{
 	margin-right:5px;
 	padding-right:18px;
 
-	background:transparent url(http://wonderland:3000/static/i/arrow_down_white.gif) no-repeat right center;
+	background:transparent url(../static/i/arrow_down_white.gif) no-repeat right center;
 }
 #actions_nav_list{
 	display:none;
@@ -233,40 +234,40 @@ a:hover{
 	outline:none;
 }
 a.commit{
-	background:transparent url(http://wonderland:3000/static/i/icons/commit.png) no-repeat;
+	background:transparent url(../static/i/icons/commit.png) no-repeat;
 }
 a.diff{
-	background:transparent url(http://wonderland:3000/static/i/icons/diff.png) no-repeat;
+	background:transparent url(../static/i/icons/diff.png) no-repeat;
 }
 a.diffcurrent{
-	background:transparent url(http://wonderland:3000/static/i/icons/diffcurrent.png) no-repeat;
+	background:transparent url(../static/i/icons/diffcurrent.png) no-repeat;
 }
 a.tree{
-	background:transparent url(http://wonderland:3000/static/i/icons/tree.png) no-repeat;
+	background:transparent url(../static/i/icons/tree.png) no-repeat;
 }
 a.shortlog{
-	background:transparent url(http://wonderland:3000/static/i/icons/shortlog.png) no-repeat;
+	background:transparent url(../static/i/icons/shortlog.png) no-repeat;
 }
 a.longlog{
-	background:transparent url(http://wonderland:3000/static/i/icons/longlog.png) no-repeat;
+	background:transparent url(../static/i/icons/longlog.png) no-repeat;
 }
 a.blob{
-	background:transparent url(http://wonderland:3000/static/i/icons/blob.png) no-repeat;
+	background:transparent url(../static/i/icons/blob.png) no-repeat;
 }
 a.blame{
-	background:transparent url(http://wonderland:3000/static/i/icons/blame.png) no-repeat;
+	background:transparent url(../static/i/icons/blame.png) no-repeat;
 }
 a.history{
-	background:transparent url(http://wonderland:3000/static/i/icons/history.png) no-repeat;
+	background:transparent url(../static/i/icons/history.png) no-repeat;
 }
 a.raw{
-	background:transparent url(http://wonderland:3000/static/i/icons/raw.png) no-repeat;
+	background:transparent url(../static/i/icons/raw.png) no-repeat;
 }
 .sha1_holder{
-	background:transparent url(http://wonderland:3000/static/i/icons/button_sha1.png) no-repeat;
+	background:transparent url(../static/i/icons/button_sha1.png) no-repeat;
 }
 .sha1_holder_invert{
-	background:transparent url(http://wonderland:3000/static/i/icons/button_sha1_invert.png) no-repeat;
+	background:transparent url(../static/i/icons/button_sha1_invert.png) no-repeat;
 }
 .sha1_label{
 	padding-top:2px;
@@ -274,7 +275,7 @@ a.raw{
 }
 .msg{
 	padding:5px 10px 5px 35px;
-	background:#f0f0f0 url(http://wonderland:3000/static/i/icons/attention.png) no-repeat 10px center;
+	background:#f0f0f0 url(../static/i/icons/attention.png) no-repeat 10px center;
 	border:1px solid #ddd;
 	margin:30px 15px;
 }
@@ -310,7 +311,7 @@ a.rss_logo:hover {
 	width:95px;
 	height:26px;
 	border:0;
-	background:transparent url(http://wonderland:3000/static/i/buttons/search.png) no-repeat;
+	background:transparent url(../static/i/buttons/search.png) no-repeat;
 	cursor: pointer;
 }
 
