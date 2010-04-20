@@ -1,79 +1,109 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta charset="utf-8" />
-		<meta name="robots" content="index, nofollow" />
-		<title>
-			Gitalist - a modern git web viewer
-		</title>
-		<link rel="stylesheet" type="text/css" href="static/core.css" />
-		<link rel="shortcut icon" href="static/git-favicon.png" type="image/png" />
-	</head>
-	<body>
-		<div id="header_holder">
-			<div class="sub_holder">
-				<div id="header">
-					<a href="/" id="logo" name="logo"><img src="static/gitalist-logo.png" alt="Gitalist" /></a>
-				</div>
-				<div id="nav_logs">
-					<ul>
-						<li>
-							<a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git" id="tree" name="tree">Source</a>
-						</li>
-						<li>
-							<a href="http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm" id="log_full" name="log_full">Docs</a>
-						</li><!-- TODO
-						<li> 
-							<a href="" id="log_short" name="log_short">Demo</a>
-						</li> -->
-					</ul>
-				</div>
-				<h1>
-					Home / Gitalist
-				</h1>
-			</div>
-		</div>
-		<div id="content_holder">
-			<div id="content" class="sub_holder">
-				<div id="content_inner">
-					<br />
-					<br />
-					<h2>Status</h2>
-					<p class='copy'>
-					Good enough to use, but with some rough edges.
-					</p>
-					
-					<dl class='copy'>
-						<dt>Stable</dt>
-						<dd><a href="http://search.cpan.org/~broq/Gitalist-0.001002/" title="0.001002">0.001002</a></dd>
-						<dt>Development</dt>
-						<dd><a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git;a=shortlog;h=refs/heads/swann" title="swann">swann</a></dd>
-					</dl>
-					<h2>Features</h2>
-					<p>
-						<ul>
-							<li>Multiple repository support</li>
-							<li>Multiple branch support</li>
-							<li>Commit comparisons</li>
-							<li>Atom feeds</li>
-						</ul>
-					</p>
-					<h2>Contact / help</h2>
-					<p class='copy'>IRC: irc.perl.org #gitalist</p>
-					<p class='copy'>Bug reports: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Gitalist">Perl RT</a></p>
-	
-				</div>
-			</div>
-		</div>
-		<div id="footer_holder">
-			<div id="footer" class="sub_holder">
-				<a title="git homepage" href="http://git-scm.org/"><img src="static/git-logo.png" id="git_logo" alt="git" /></a>
-				<div id="feeds">
-					<a class="rss_logo" href="http://github.com/broquaint/Gitalist/commits/master.atom">Atom</a>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="robots" content="index, nofollow" />
+        <title>
+            Gitalist - a modern git web viewer
+        </title>
+        <link rel="stylesheet" type="text/css" href="static/core.css" />
+        <link rel="shortcut icon" href="static/git-favicon.png" type="image/png" />
+    </head>
+    <body>
+        <div id="header_holder">
+            <div class="sub_holder">
+                <div id="header">
+                    <a href="/" id="logo" name="logo"><img src="static/gitalist-logo.png" alt="Gitalist" /></a>
+                </div>
+                <div id="nav_logs">
+                    <ul>
+                        <li>
+                            <a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git" id="log_short" name="tree">Source</a>
+                        </li>
+                        <li>
+                            <a href="http://example.gitalist.com/" id="tree" name="tree">Example</a>
+                        </li>
+                        <li>
+                            <a href="http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm" id="log_full" name="log_full">Docs</a>
+                        </li><!-- TODO
+                        <li> 
+                            <a href="" id="log_short" name="log_short">Demo</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <h1>
+                    Home / Gitalist - <em>a modern git web viewer</em>
+                </h1>
+            </div>
+        </div>
+        <div id="content_holder">
+            <div id="content" class="sub_holder">
+                <div id="content_inner">
+                    <br />
+                    <img class="screenshot" src="static/i/screenshots/combined.gif" width="565" height="450" alt="Combined" /><br />
+                    <h2>
+                        Gitalist
+                    </h2>
+                    <p class="copy">
+                        A web git viewer for your git repository (local or server)
+                    </p>
+                    <h2>
+                        Features
+                    </h2>
+                    <ul>
+                        <li>Multiple repository support
+                        </li>
+                        <li>Multiple branch support
+                        </li>
+                        <li>Commit comparisons
+                        </li>
+                        <li>Atom feeds
+                        </li>
+                    </ul>
+                    <h2>
+                        Status
+                    </h2>
+                    <dl class='copy'>
+                        <dt>
+                            Status
+                        </dt>
+                        <dd>
+                            Good enough to use, but with some rough edges.
+                        </dd>
+                        <dt>
+                            Stable
+                        </dt>
+                        <dd>
+                            <a href="http://search.cpan.org/~broq/Gitalist-0.001002/" title="0.001002">0.001002</a>
+                        </dd>
+                        <dt>
+                            Development
+                        </dt>
+                        <dd>
+                            <a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git;a=shortlog;h=refs/heads/swann" title="swann">swann</a>
+                        </dd>
+                    </dl>
+                    <h2>
+                        Contact / help
+                    </h2>
+                    <p class='copy'>
+                        IRC: <a href="http://irc.perl.org/">irc.perl.org</a> #gitalist
+                    </p>
+                    <p class='copy'>
+                        Bug reports: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Gitalist">Perl RT</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer_holder">
+            <div id="footer" class="sub_holder">
+                <a title="git homepage" href="http://git-scm.org/"><img src="static/git-logo.png" id="git_logo" alt="git" /></a>
+                <div id="feeds">
+                    <a class="rss_logo" href="http://github.com/broquaint/Gitalist/commits/master.atom">Atom</a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

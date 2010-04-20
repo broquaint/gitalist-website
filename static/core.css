@@ -14,7 +14,6 @@
 	background-color:#f0f0f0;
 }
 
-
 body{
 	background:#FAFAFA url(../static/i/bg.png) repeat-x left top;
 	padding:0;
@@ -45,7 +44,7 @@ a img{
 	background:transparent url(../static/i/bg_content.png) repeat-y center center;
 }
 #content{
-	min-height:200px;
+	min-height:400px;
 	padding:0 12px 40px 10px;
 	background:transparent url(../static/i/bg_bottom.png) no-repeat center bottom;
 }
@@ -57,6 +56,12 @@ a img{
 .copy{
 	margin-left: 15px;
 }
+
+.screenshot {
+    float: right;
+    padding: 40px 0 0 20px;
+}
+
 #logo{
 	margin-left:-10px;
 	float:left;
