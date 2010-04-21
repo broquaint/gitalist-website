@@ -1,0 +1,48 @@
+
+
+<h2>
+    Install:
+</h2>
+<ul>
+    <li>start with a plain debian 5 x64 system
+    </li>
+    <li>setup proxy and apt proxy setting
+    </li>
+    <li>apt-get install build-essential libxml2-dev zlib1g-ev libexpat1-dev
+    </li>
+    <li>
+        <a href="http://search.cpan.org/~mstrout/local-lib-1.006000/lib/local/lib.pm#The_bootstrapping_technique">bootstrap local::lib</a>
+    </li>
+    <li>cpanp config
+    </li>
+    <li>cpanp i Archive::Zip (for Test::Warn)
+    </li>
+    <li>cpanp i Gitalist
+    </li>
+</ul>
+
+<h2>
+    Deploy:
+</h2>
+<ul>
+    <li>add non-free to /etc/apt/sources.list
+    </li>
+    <li>apt-get install libapache2-mod-fastcgi
+    </li>
+    <li>cpanp i FCGI FCGI::ProcManager
+    </li>
+    <li>cp `perl -Ilib -MGitalist -e'print Gitalist-&gt;path_to("gitalist.conf")'` /usr/local/etc/gitalist.conf
+    </li>
+    <li>create standalone init script /etc/init.d/gitalist which also sets the environment var GITALIST_CONFIG=/usr/local/etc/gitalist.conf
+    </li>
+    <li>/etc/init.d/gitalist start
+    </li>
+    <li>configure apache vhost
+    </li>
+    <li>a2enmod expires
+    </li>
+    <li>a2enmod headers
+    </li>
+    <li>reload apache
+    </li>
+</ul>
