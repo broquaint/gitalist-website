@@ -35,13 +35,8 @@ sub auto : Private {
 
 =cut
 
-
-
 sub default : Private {
-    my ( $self, $c ) = @_;
-
-    # Hello World
-    $c->response->body( $c->welcome_message );
+    return 1;
 }
 
 =head2 end
@@ -50,7 +45,40 @@ Attempt to render a view, if needed.
 
 =cut 
 
-sub end : ActionClass('RenderView') {}
+sub end : Private {
+
+    my ( $self, $c ) = @_;
+
+    return if $c->res->status =~ /^30/;
+    return if $c->res->body();
+
+    $c->stash->{template} = 'www/page_not_found.html'
+      if $c->res->status == 404;
+
+    # If there is already a body then we don't need to process the templates
+    if ( $c->res->body ) {
+        return 1;
+    }
+
+    if ( !$c->stash->{template} ) {
+
+        # No template defined, use path
+        my $path        = $c->req->path;
+        my $legal_chars = quotemeta('.-_/');
+        if ( $path =~ /\.\./ || $path =~ /[^\w$legal_chars]/ ) {
+            warn "Dodgy path: $path - rewriting" if $c->debug;
+            $path =~ s/\.\.//g;
+            $path =~ s/[^\w$legal_chars]//g;    # security?
+            $c->res->redirect( '/' . $path );
+            $c->detach();
+        }
+        $path .= 'index.html'
+          if $path !~ /html$/ && $path !~ /xml$/ && $path !~ /txt$/;
+        $c->stash->{template} = "$path";
+    }
+
+    $c->forward('View::TT');
+}
 
 =head1 AUTHOR
 
