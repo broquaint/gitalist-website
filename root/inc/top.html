@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="Gitalist - a modern git web viewer" />
+        <meta name="keywords" content="gitalist, git, gitweb, git web, git viewer, repository viewer, gitweb.cgi" />
+        <title>
+            [% page.title %]
+        </title>
+        <link rel="stylesheet" type="text/css" href="[% c.uri_for('static') %]/core.css" />
+		<link rel="shortcut icon" href="[% c.uri_for('static') %]/favicon.ico" /> 
+    </head>
+    <body>
+        <div id="header_holder">
+            <div class="sub_holder">
+                <div id="header">
+                    <a href="/" id="logo" name="logo"><img src="[% c.uri_for('static') %]/gitalist-logo.png" alt="Gitalist" /></a>
+                </div>
+                <div id="nav_logs">
+                    <ul>
+                        <li>
+                            <a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git" id="log_short" name="tree">Source</a>
+                        </li>
+                        <li>
+                            <a href="http://example.gitalist.com/" id="tree" name="tree">Example</a>
+                        </li>
+                        <li>
+                            <a href="http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm" id="log_full" name="log_full">Docs</a>
+                        </li><!-- TODO
+                        <li> 
+                            <a href="" id="log_short" name="log_short">Demo</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <h1>
+                    [% page.title %]
+                </h1>
+            </div>
+        </div>
+        <div id="content_holder">
+            <div id="content" class="sub_holder">
+                <div id="content_inner">
+

@@ -1,48 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta charset="utf-8" />
-        <meta name="robots" content="index, nofollow" />
-        <meta name="description" content="Gitalist - a modern git web viewer" />
-        <meta name="keywords" content="gitalist, git, gitweb, git web, git viewer, repository viewer, gitweb.cgi" />
-        <title>
-            Gitalist - a modern git web viewer
-        </title>
-        <link rel="stylesheet" type="text/css" href="static/core.css" />
-		<link rel="shortcut icon" href="static/favicon.ico" /> 
-    </head>
-    <body>
-        <div id="header_holder">
-            <div class="sub_holder">
-                <div id="header">
-                    <a href="/" id="logo" name="logo"><img src="static/gitalist-logo.png" alt="Gitalist" /></a>
-                </div>
-                <div id="nav_logs">
-                    <ul>
-                        <li>
-                            <a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Gitalist.git" id="log_short" name="tree">Source</a>
-                        </li>
-                        <li>
-                            <a href="http://example.gitalist.com/" id="tree" name="tree">Example</a>
-                        </li>
-                        <li>
-                            <a href="http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm" id="log_full" name="log_full">Docs</a>
-                        </li><!-- TODO
-                        <li> 
-                            <a href="" id="log_short" name="log_short">Demo</a>
-                        </li> -->
-                    </ul>
-                </div>
-                <h1>
-                    Home / Gitalist - <em>a modern git web viewer</em>
-                </h1>
-            </div>
-        </div>
-        <div id="content_holder">
-            <div id="content" class="sub_holder">
-                <div id="content_inner">
+[% 
+
+    SET page = {
+        title => 'Gitalist - a modern git web viewer',
+    };
+
+    PROCESS inc/top.html
+
+%]
                     <br />
                     <img class="screenshot" src="static/i/screenshots/combined.gif" width="565" height="450" alt="Combined" /><br />
                     <h2>
@@ -99,25 +63,4 @@
                     <p class='copy'>
                         Bug reports: <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Gitalist">Perl RT</a>
                     </p>
-                </div>
-            </div>
-        </div>
-        <div id="footer_holder">
-            <div id="footer" class="sub_holder">
-                <a title="git homepage" href="http://git-scm.org/"><img src="static/git-logo.png" id="git_logo" alt="git" /></a>
-                <div id="feeds">
-                    <a class="rss_logo" href="http://github.com/broquaint/Gitalist/commits/master.atom">Atom</a>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-        try {
-        var pageTracker = _gat._getTracker("UA-15963815-1");
-        pageTracker._trackPageview();
-        } catch(err) {}</script>
-    </body>
-</html>
+[% PROCESS inc/bottom.html %]

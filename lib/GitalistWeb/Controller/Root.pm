@@ -23,13 +23,12 @@ GitalistWeb::Controller::Root - Root Controller for GitalistWeb
 =cut
 
 sub auto : Private {
-	    my ( $self, $c ) = @_;
+    my ( $self, $c ) = @_;
 
-		    $c->res->content_type('text/html; charset=utf-8');
-			    
-				    return 1;
+    $c->res->content_type('text/html; charset=utf-8');
+
+    return 1;
 }
-
 
 =head2 default
 
@@ -53,7 +52,7 @@ sub end : Private {
     return if $c->res->body();
 
     $c->stash->{template} = 'www/page_not_found.html'
-      if $c->res->status == 404;
+        if $c->res->status == 404;
 
     # If there is already a body then we don't need to process the templates
     if ( $c->res->body ) {
@@ -73,7 +72,7 @@ sub end : Private {
             $c->detach();
         }
         $path .= 'index.html'
-          if $path !~ /html$/ && $path !~ /xml$/ && $path !~ /txt$/;
+            if $path !~ /html$/ && $path !~ /xml$/ && $path !~ /txt$/;
         $c->stash->{template} = "$path";
     }
 
