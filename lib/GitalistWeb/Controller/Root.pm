@@ -30,6 +30,13 @@ sub auto : Private {
     return 1;
 }
 
+sub fav : Path('favicon.ico') {
+    my ( $self, $c ) = @_;
+    $c->res->redirect('/static/favicon.ico');
+    $c->res->status(301);
+    $c->detach();
+}
+
 =head2 default
 
 =cut
