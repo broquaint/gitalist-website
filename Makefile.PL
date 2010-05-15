@@ -1,14 +1,13 @@
-use inc::Module::Install;
+use inc::Module::Install 0.91;
 
 name 'GitalistWeb';
 all_from 'lib/GitalistWeb.pm';
 
 requires 'Catalyst::Runtime' => '5.7006';
-requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
-requires 'YAML'; # This should reflect the config file format you've chosen
-                 # See Catalyst::Plugin::ConfigLoader for supported formats
+requires 'Catalyst::View::TT';
+
 catalyst;
 
 install_script glob('script/*.pl');

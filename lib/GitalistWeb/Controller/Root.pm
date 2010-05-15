@@ -8,7 +8,7 @@ use base 'Catalyst::Controller';
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
 #
-__PACKAGE__->config->{namespace} = '';
+__PACKAGE__->config(namespace => '');
 
 =head1 NAME
 
@@ -20,71 +20,58 @@ GitalistWeb::Controller::Root - Root Controller for GitalistWeb
 
 =head1 METHODS
 
+=head2 fav
+
 =cut
 
-sub auto : Private {
-    my ( $self, $c ) = @_;
-
-    $c->res->content_type('text/html; charset=utf-8');
-
-    return 1;
-}
-
-sub fav : Path('favicon.ico') {
+sub fav : Chained('base') PathPart('favicon.ico') Args(0) {
     my ( $self, $c ) = @_;
     $c->res->redirect('/static/favicon.ico');
     $c->res->status(301);
-    $c->detach();
 }
+
+
+=head2 base
 
 =head2 default
 
 =cut
 
-sub default : Private {
-    return 1;
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+
+sub default : Chained('base') PathPart('') Args {
+    my ($self, $c, @args) = @_;
+    my $path = join('/', @args);
+    if ($path !~ /\w+\.\w+$/) {
+        $path .= '/index.html';
+    }
+    $path =~ s{^/}{};
+    $c->log->debug('Template path: /' . $path) if $c->debug;
+    $c->detach('/error404')
+        if $path =~ m|^inc/|;
+    $c->detach('/error404')
+        unless -f $c->path_to('root', $path);
+    $c->stash(template => $path);
+
+}
+
+=head2 error404
+
+=cut
+
+sub error404 : Action {
+    my ($self, $c) = @_;
+    $c->stash(template => 'error404.html');
+    $c->response->code(404);
 }
 
 =head2 end
 
 Attempt to render a view, if needed.
 
-=cut 
+=cut
 
-sub end : Private {
-
-    my ( $self, $c ) = @_;
-
-    return if $c->res->status =~ /^30/;
-    return if $c->res->body();
-
-    $c->stash->{template} = 'www/page_not_found.html'
-        if $c->res->status == 404;
-
-    # If there is already a body then we don't need to process the templates
-    if ( $c->res->body ) {
-        return 1;
-    }
-
-    if ( !$c->stash->{template} ) {
-
-        # No template defined, use path
-        my $path        = $c->req->path;
-        my $legal_chars = quotemeta('.-_/');
-        if ( $path =~ /\.\./ || $path =~ /[^\w$legal_chars]/ ) {
-            warn "Dodgy path: $path - rewriting" if $c->debug;
-            $path =~ s/\.\.//g;
-            $path =~ s/[^\w$legal_chars]//g;    # security?
-            $c->res->redirect( '/' . $path );
-            $c->detach();
-        }
-        $path .= 'index.html'
-            if $path !~ /html$/ && $path !~ /xml$/ && $path !~ /txt$/;
-        $c->stash->{template} = "$path";
-    }
-
-    $c->forward('View::TT');
-}
+sub end : ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
