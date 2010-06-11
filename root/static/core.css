@@ -533,3 +533,6 @@ div.blob {
 
 /* /blobdiff etc */
 
+tt {
+  font-size: 10pt;
+}
