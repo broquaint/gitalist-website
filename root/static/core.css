@@ -116,6 +116,9 @@ a img{
 a#log_short{
 	background:#666 url(../static/i/icons/shortlog.gif) no-repeat 15px center;
 }
+a#install{
+	background:#666 url(../static/i/icons/shortlog.gif) no-repeat 15px center;
+}
 a#log_full{
 	background:#666 url(../static/i/icons/fulllog.gif) no-repeat 15px center;
 }
