@@ -12,20 +12,20 @@
     Install:
 </h2>
 <ul>
-    <li>start with a plain debian 5 x64 system
+    <li>Start with a plain debian 5 x64 system
     </li>
     <li>setup proxy and apt proxy setting
     </li>
-    <li>apt-get install build-essential libxml2-dev zlib1g-ev libexpat1-dev
+    <li><tt>apt-get install build-essential libxml2-dev zlib1g-ev libexpat1-dev</tt>
     </li>
     <li>
-        <a href="http://search.cpan.org/~mstrout/local-lib-1.006000/lib/local/lib.pm#The_bootstrapping_technique">bootstrap local::lib</a>
+        <a href="http://search.cpan.org/~mstrout/local-lib-1.006000/lib/local/lib.pm#The_bootstrapping_technique">bootstrap <tt>local::lib</tt></a>
     </li>
-    <li>cpanp config
+    <li><tt>cpanp config</tt>
     </li>
-    <li>cpanp i Archive::Zip (for Test::Warn)
+    <li><tt>cpanp i Archive::Zip</tt> (for Test::Warn)
     </li>
-    <li>cpanp i Gitalist
+    <li><tt>cpanp i Gitalist</tt>
     </li>
 </ul>
 
@@ -33,23 +33,23 @@
     Deploy:
 </h2>
 <ul>
-    <li>add non-free to /etc/apt/sources.list
+    <li>add non-free to <tt>/etc/apt/sources.list</tt>
     </li>
-    <li>apt-get install libapache2-mod-fastcgi
+    <li><tt>apt-get install libapache2-mod-fastcgi</tt>
     </li>
-    <li>cpanp i FCGI FCGI::ProcManager
+    <li><tt>cpanp i FCGI FCGI::ProcManager</tt>
     </li>
-    <li>cp `perl -Ilib -MGitalist -e'print Gitalist-&gt;path_to("gitalist.conf")'` /usr/local/etc/gitalist.conf
+    <li><tt>cp `perl -Ilib -MGitalist -e'print Gitalist-&gt;path_to("gitalist.conf")'` /usr/local/etc/gitalist.conf</tt>
     </li>
-    <li>create standalone init script /etc/init.d/gitalist which also sets the environment var GITALIST_CONFIG=/usr/local/etc/gitalist.conf
+    <li>create standalone init script <tt>/etc/init.d/gitalist</tt> which also sets the environment var <tt>GITALIST_CONFIG=/usr/local/etc/gitalist.conf</tt>
     </li>
-    <li>/etc/init.d/gitalist start
+    <li><tt>/etc/init.d/gitalist start</tt>
     </li>
-    <li>configure apache vhost
+    <li>configure apache vhost and enable <a href="http://httpd.apache.org/docs/2.0/mod/core.html#allowencodedslashes"><tt>AllowEncodedSlashes</tt></a>
     </li>
-    <li>a2enmod expires
+    <li><tt>a2enmod expires</tt>
     </li>
-    <li>a2enmod headers
+    <li><tt>a2enmod headers</tt>
     </li>
     <li>reload apache
     </li>
