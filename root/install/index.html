@@ -1,0 +1,28 @@
+[% 
+
+    SET page = {
+        title => 'Installing Gitalist with local::lib',
+    };
+
+    PROCESS inc/top.html
+
+%]
+
+<h2>
+    Installing Gitalist using <a href="http://search.cpan.org/perldoc/local::lib">local::lib</a>
+</h2>
+
+<img src="/static/i/bootstrap.gif" width="900" height="521" alt="Bootstraping Gitalist" />
+
+<pre>
+    git clone git://github.com/broquaint/Gitalist.git
+    
+    cd Gitalist
+    
+    perl script/bootstrap.pl
+    
+    ./script/gitalist_server.pl
+</pre>
+
+
+[% PROCESS inc/bottom.html %]
