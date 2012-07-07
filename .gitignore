@@ -1,2 +1,4 @@
+htdocs/*
+app.psgi
 updated.txt
 Thumbs.db
